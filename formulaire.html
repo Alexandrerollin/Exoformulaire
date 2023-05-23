@@ -8,8 +8,9 @@
 </head>
 <body>
     <h1>Formulaire</h1>
+    <fieldset>
+        <legend>Infos personnelles :</legend>
     <form action="monprogramme.php" method="POST">
-
         <label for="prenom">Prénom :</label>
         <input type="text" name="prenom" minlength="2" maxlength="20" placeholder="Entrez votre prénom">
         <br>
@@ -31,9 +32,57 @@
         <label for="">Laissez nous un message :</label>
         <br>
         <textarea name="message" id="" cols="70" rows="10" placeholder="Votre plus beau message..."></textarea>
+        <br>
+        <label for="date">Date de mon commentaire :</label>
+        <input type="date" name="date">
+        <br>
+        <label for="image">Votre image :</label>
+        <input type="file" accept=".png , .jpg , .gif">
         </label>
-
-    </form>
-    
+    </fieldset>
+</form>
+    <fieldset>
+        <legend>Vous préférez :</legend>
+            <form action="monprogramme.php" method="POST">
+                <input type="checkbox" id="checkbox"><label for="checkbox">Le HTML</label>
+                <br>
+                <input type="checkbox" id="checkbox2"><label for="checkbox2">Le CSS</label>
+                <br>
+                <input type="checkbox" id="checkbox3"><label for="checkbox3">Le JAVASCRIPT</label>
+                <br>
+                <input type="checkbox" id="checkbox4"><label for="checkbox4">Ne rien faire</label>
+            </form>
+    </fieldset>
+    <fieldset>
+        <legend>Vous vous levez :</legend>
+            <form action="monprogramme.php" method="POST">
+                <input type="radio" id="radio" name="radio" value="radio1"><label for="radio1">Le matin</label>
+                <br>
+                <input type="radio" id="radio" name="radio" value="radio2"><label for="radio2">Le midi</label>
+                <br>
+                <input type="radio" id="radio" name="radio" value="radio3"><label for="radio3">Le soir</label>
+                <br>
+                <input type="radio" id="radio" name="radio" value="radio4"><label for="radio4">En retard</label>
+            </form>
+    </fieldset>
+    <fieldset>
+        <legend>Fin du formulaire :</legend>
+            <form action="monprogramme.php" method="POST">
+                <label for="liste">Vous en avez assez ?</label>
+                <select name="liste" id="liste">
+                    <optgroup label="Team pas encore">
+                <option value="option1">J'en veux plus !</option>
+                <option value="option1">C'est super !</option>
+            </optgroup>
+            <optgroup label="Team Oula">
+                <option value="option3">J'en ai marre !</option>
+                <option value="option4" selected>Pitié !</option>
+            </optgroup>
+            </select>
+            <br>
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="reset">
+        </form>
+    </fieldset>
 </body>
 </html>
